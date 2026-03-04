@@ -17,6 +17,7 @@ dependencies = [
 
 [project.scripts]
 ingest = "cli.ingest:main"
+versioning = "cli.versioning:main"
 
 [project.optional-dependencies]
 dev = [

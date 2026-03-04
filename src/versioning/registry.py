@@ -207,3 +207,53 @@ def _active_index_path(out_dir: Path, dataset: str) -> Path:
 def get_active_index(out_dir: Path, dataset: str) -> dict[str, Any]:
     path = _active_index_path(out_dir, dataset)
     return load_manifest(path) or {"active_index": None, "history": [], "updated_at": None}
+
+
+def set_active_index(
+    index_version: str,
+    out_dir: Path,
+    dataset: str,
+    is_admin: bool,
+) -> dict[str, Any]:
+    _ensure_admin(is_admin)
+    if not _version_exists("index", index_version, out_dir, dataset):
+        raise VersioningError(f"Index version '{index_version}' not found.")
+
+    active_index = get_active_index(out_dir, dataset)
+    history = list(active_index.get("history", []))
+    current = active_index.get("active_index")
+    if current and current != index_version:
+        history.append(current)
+
+    updated = {
+        "active_index": index_version,
+        "history": history,
+        "updated_at": datetime.now(UTC).isoformat(),
+    }
+    write_manifest_atomic(_active_index_path(out_dir, dataset), updated)
+    return updated
+
+
+def rollback_active_index(out_dir: Path, dataset: str, is_admin: bool) -> dict[str, Any]:
+    _ensure_admin(is_admin)
+    active_index = get_active_index(out_dir, dataset)
+    history = list(active_index.get("history", []))
+    if not history:
+        raise VersioningError("No previous index version available for rollback.")
+    previous = history.pop()
+    updated = {
+        "active_index": previous,
+        "history": history,
+        "updated_at": datetime.now(UTC).isoformat(),
+    }
+    write_manifest_atomic(_active_index_path(out_dir, dataset), updated)
+    return updated
+
+
+def _version_exists(kind: str, name: str, out_dir: Path, dataset: str) -> bool:
+    return _version_manifest_path(kind, name, out_dir, dataset).exists()
+
+
+def _ensure_admin(is_admin: bool) -> None:
+    if not is_admin:
+        raise VersioningError("Admin privileges required for version switch/rollback.")

@@ -10,6 +10,8 @@ from versioning.registry import (
     get_active_index,
     list_versions,
     register_dataset_version,
+    rollback_active_index,
+    set_active_index,
 )
 
 __all__ = [
@@ -22,4 +24,6 @@ __all__ = [
     "get_active_index",
     "list_versions",
     "register_dataset_version",
+    "rollback_active_index",
+    "set_active_index",
 ]
