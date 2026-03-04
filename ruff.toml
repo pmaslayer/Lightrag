@@ -1,0 +1,11 @@
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  ".venv",
+  ".codex",
+  ".planning",
+  ".pytest_cache",
+]
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
