@@ -6,9 +6,18 @@ from pathlib import Path
 from typing import Any
 
 from ingestion.chunking import Chunk, chunk_pages
-from ingestion.constants import INGESTION_VERSION
+from ingestion.constants import (
+    DEFAULT_EMBEDDING_MODEL,
+    DEFAULT_EMBEDDING_PARAMS,
+    INGESTION_VERSION,
+)
 from ingestion.extract import ExtractedTextResult, extract_text_from_pdf
 from storage.manifest import load_manifest, write_manifest_atomic
+from versioning.registry import (
+    create_embedding_version,
+    create_index_version,
+    register_dataset_version,
+)
 
 
 class IngestionError(RuntimeError):
@@ -81,6 +90,25 @@ def ingest_dataset(input_path: Path, dataset: str, out_dir: Path) -> dict[str, A
     }
 
     write_manifest_atomic(manifest_path, manifest)
+
+    dataset_entry = register_dataset_version(
+        manifest=manifest,
+        manifest_path=manifest_path,
+        out_dir=out_dir,
+        dataset=dataset,
+    )
+    embedding_entry = create_embedding_version(
+        model=DEFAULT_EMBEDDING_MODEL,
+        parameters=dict(DEFAULT_EMBEDDING_PARAMS),
+        out_dir=out_dir,
+        dataset=dataset,
+    )
+    create_index_version(
+        dataset_version=dataset_entry.name,
+        embedding_version=embedding_entry.name,
+        out_dir=out_dir,
+        dataset=dataset,
+    )
     return manifest
 
 

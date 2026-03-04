@@ -14,3 +14,7 @@ EXECUTION_ENVIRONMENT = "host-installed-deps"
 
 # Canonical CLI command used in tests/CI.
 CLI_COMMAND = "ingest --input <path> --dataset <name> --out <dir>"
+
+# Placeholder embedding metadata captured during ingestion until embedding pipeline is implemented.
+DEFAULT_EMBEDDING_MODEL = "pending"
+DEFAULT_EMBEDDING_PARAMS = {"status": "not-configured"}
