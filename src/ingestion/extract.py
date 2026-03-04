@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -81,7 +81,7 @@ def extract_text_from_pdf(path: Path) -> ExtractedTextResult:
         "parser_version": pypdf.__version__,
         "ocr": "pytesseract",
         "ocr_attempted": _should_attempt_ocr(page_texts),
-        "extracted_at": datetime.now(datetime.UTC).isoformat(),
+        "extracted_at": datetime.now(UTC).isoformat(),
     }
 
     return ExtractedTextResult(
