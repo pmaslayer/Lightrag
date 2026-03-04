@@ -1,1 +1,3 @@
-"""Ingestion pipeline package."""
+from ingestion.ingest import ingest_pdf
+
+__all__ = ["ingest_pdf"]
