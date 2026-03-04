@@ -7,9 +7,9 @@
 
 ### Ingestion
 
-- [ ] **ING-01**: User can ingest PDF documents with deterministic parsing, chunking, and metadata extraction
-- [ ] **ING-02**: User can re-run ingestion with reproducible outputs for the same input
-- [ ] **ING-03**: System supports incremental ingestion updates without full re-index
+- [x] **ING-01**: User can ingest PDF documents with deterministic parsing, chunking, and metadata extraction
+- [x] **ING-02**: User can re-run ingestion with reproducible outputs for the same input
+- [x] **ING-03**: System supports incremental ingestion updates without full re-index
 
 ### Graph Indexing
 
@@ -50,8 +50,8 @@
 
 ### CI/CD & Testing
 
-- [ ] **CICD-01**: System has automated tests covering ingestion, indexing, and retrieval
-- [ ] **CICD-02**: System has CI pipeline that runs tests and lint checks on push
+- [x] **CICD-01**: System has automated tests covering ingestion, indexing, and retrieval
+- [x] **CICD-02**: System has CI pipeline that runs tests and lint checks on push
 
 ### UI
 
@@ -86,9 +86,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ING-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
-| ING-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
-| ING-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| ING-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
+| ING-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
+| ING-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
 | GRPH-01 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
 | GRPH-02 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
 | GRPH-03 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
@@ -108,8 +108,8 @@
 | SEC-02 | Phase 5 — Security & Resilience | Pending |
 | RES-01 | Phase 5 — Security & Resilience | Pending |
 | RES-02 | Phase 5 — Security & Resilience | Pending |
-| CICD-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
-| CICD-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| CICD-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
+| CICD-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
 | UI-01 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
 | UI-02 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
 | UI-03 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
