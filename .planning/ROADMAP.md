@@ -10,7 +10,7 @@
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Ingestion, Versioning & CI/CD Foundation** - ingestion, версионирование и базовый CI/CD
+- [x] **Phase 1: Ingestion, Versioning & CI/CD Foundation** - ingestion, версионирование и базовый CI/CD
 - [ ] **Phase 2: Graph Extraction & Postgres Graph Index** - извлечение графа и хранение в Postgres
 - [ ] **Phase 3: Hybrid Retrieval, Caching & UI** - гибридный поиск, кэш и UI
 - [ ] **Phase 4: Observability & Evaluation** - наблюдаемость и оценка качества
@@ -27,12 +27,12 @@
   2. Пользователь выполняет инкрементальную загрузку и видит, что переобрабатываются только новые/изменённые документы.
   3. Оператор переключает активную версию индекса и видит, что выдача соответствует выбранной версии.
   4. При push в репозиторий автоматически запускаются тесты и линт, и результат виден в CI.
-**Plans**: TBD
+**Plans**: 3/3 complete
 
 Plans:
-- [ ] 01-01: Ingestion pipeline (PDF parsing, chunking, metadata)
-- [ ] 01-02: Version registry for data and embeddings
-- [ ] 01-03: CI/CD baseline (tests + lint)
+- [x] 01-01: Ingestion pipeline (PDF parsing, chunking, metadata)
+- [x] 01-02: Version registry for data and embeddings
+- [x] 01-03: CI/CD baseline (tests + lint)
 
 ### Phase 2: Graph Extraction & Postgres Graph Index
 **Goal**: Извлечение сущностей/отношений, дедупликация и графовые запросы в Postgres
@@ -96,7 +96,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Ingestion, Versioning & CI/CD Foundation | 0/3 | Not started | - |
+| 1. Ingestion, Versioning & CI/CD Foundation | 3/3 | Complete | 2026-03-04 |
 | 2. Graph Extraction & Postgres Graph Index | 0/2 | Not started | - |
 | 3. Hybrid Retrieval, Caching & UI | 0/3 | Not started | - |
 | 4. Observability & Evaluation | 0/2 | Not started | - |
