@@ -32,9 +32,9 @@
 
 ### Versioning
 
-- [ ] **VER-01**: System versions datasets used for indexing
-- [ ] **VER-02**: System versions embedding models and embedding outputs
-- [ ] **VER-03**: System supports rollback to a prior indexed version
+- [x] **VER-01**: System versions datasets used for indexing
+- [x] **VER-02**: System versions embedding models and embedding outputs
+- [x] **VER-03**: System supports rollback to a prior indexed version
 
 ### Caching
 
@@ -99,9 +99,9 @@
 | OBS-01 | Phase 4 — Observability & Evaluation | Pending |
 | OBS-02 | Phase 4 — Observability & Evaluation | Pending |
 | OBS-03 | Phase 4 — Observability & Evaluation | Pending |
-| VER-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
-| VER-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
-| VER-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| VER-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
+| VER-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
+| VER-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Complete |
 | CCH-01 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
 | CCH-02 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
 | SEC-01 | Phase 5 — Security & Resilience | Pending |
