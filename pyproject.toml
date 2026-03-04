@@ -3,16 +3,26 @@ requires = ["setuptools>=69.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lightragtest"
+name = "lightrag-ingestion"
 version = "0.1.0"
-description = "LightRAG testbed"
-requires-python = ">=3.12"
-dependencies = []
+description = "Deterministic PDF ingestion pipeline with incremental manifest updates"
+requires-python = ">=3.13"
+dependencies = [
+  "orjson==3.11.7",
+  "pdf2image==1.17.0",
+  "pillow==10.4.0",
+  "pypdf==6.7.0",
+  "pytesseract==0.3.13",
+]
+
+[project.scripts]
+ingest = "cli.ingest:main"
 
 [project.optional-dependencies]
 dev = [
   "pytest==9.0.2",
   "ruff==0.9.10",
+  "reportlab==4.2.0",
 ]
 
 [tool.setuptools]
@@ -23,3 +33,10 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
