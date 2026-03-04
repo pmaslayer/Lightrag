@@ -86,33 +86,33 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ING-01 | Phase 1 | Pending |
-| ING-02 | Phase 1 | Pending |
-| ING-03 | Phase 1 | Pending |
-| GRPH-01 | Phase 2 | Pending |
-| GRPH-02 | Phase 2 | Pending |
-| GRPH-03 | Phase 2 | Pending |
-| RET-01 | Phase 3 | Pending |
-| RET-02 | Phase 3 | Pending |
-| RET-03 | Phase 3 | Pending |
-| RET-04 | Phase 3 | Pending |
-| OBS-01 | Phase 4 | Pending |
-| OBS-02 | Phase 4 | Pending |
-| OBS-03 | Phase 4 | Pending |
-| VER-01 | Phase 1 | Pending |
-| VER-02 | Phase 1 | Pending |
-| VER-03 | Phase 1 | Pending |
-| CCH-01 | Phase 3 | Pending |
-| CCH-02 | Phase 3 | Pending |
-| SEC-01 | Phase 5 | Pending |
-| SEC-02 | Phase 5 | Pending |
-| RES-01 | Phase 5 | Pending |
-| RES-02 | Phase 5 | Pending |
-| CICD-01 | Phase 1 | Pending |
-| CICD-02 | Phase 1 | Pending |
-| UI-01 | Phase 3 | Pending |
-| UI-02 | Phase 3 | Pending |
-| UI-03 | Phase 3 | Pending |
+| ING-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| ING-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| ING-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| GRPH-01 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
+| GRPH-02 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
+| GRPH-03 | Phase 2 — Graph Extraction & Postgres Graph Index | Pending |
+| RET-01 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| RET-02 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| RET-03 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| RET-04 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| OBS-01 | Phase 4 — Observability & Evaluation | Pending |
+| OBS-02 | Phase 4 — Observability & Evaluation | Pending |
+| OBS-03 | Phase 4 — Observability & Evaluation | Pending |
+| VER-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| VER-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| VER-03 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| CCH-01 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| CCH-02 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| SEC-01 | Phase 5 — Security & Resilience | Pending |
+| SEC-02 | Phase 5 — Security & Resilience | Pending |
+| RES-01 | Phase 5 — Security & Resilience | Pending |
+| RES-02 | Phase 5 — Security & Resilience | Pending |
+| CICD-01 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| CICD-02 | Phase 1 — Ingestion, Versioning & CI/CD Foundation | Pending |
+| UI-01 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| UI-02 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
+| UI-03 | Phase 3 — Hybrid Retrieval, Caching & UI | Pending |
 
 **Coverage:**
 - v1 requirements: 25 total
